@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import { Users, Server, Settings, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 
 export default function AdminDashboard() {
     return (

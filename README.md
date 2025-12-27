@@ -1,120 +1,107 @@
-# Seven TV - Vite Edition
+# Seven TV - Vite Edition 🚀
 
-Projeto Seven TV recriado com **Vite + React + TypeScript**.
+Projeto Seven TV migrado para Vite com integração de modelo 3D Spline.
 
-## 🚀 Tecnologias
+## 🎯 Características
 
-- **Vite** - Build tool ultra-rápido
-- **React 19** - Biblioteca UI
-- **TypeScript** - Tipagem estática
-- **React Router** - Roteamento
-- **TailwindCSS** - Estilização
-- **Radix UI** - Componentes acessíveis
-- **Lucide React** - Ícones
-- **Prisma** - ORM (preparado para uso)
+- ⚡ **Vite** - Build ultra-rápido
+- 🎨 **React 19** + TypeScript
+- 🎭 **Spline 3D** - Modelo interativo em tela cheia
+- 🎨 **Tailwind CSS** - Estilização moderna
+- 🧭 **React Router** - Navegação client-side
+- 📦 **Shadcn UI** - Componentes acessíveis
 
-## 📁 Estrutura do Projeto
+## 🚀 Deploy na Hostinger
 
-```
-seventv-vite/
-├── src/
-│   ├── components/      # Componentes reutilizáveis
-│   │   ├── ui/         # Componentes UI base
-│   │   └── Navbar.tsx
-│   ├── pages/          # Páginas da aplicação
-│   │   ├── HomePage.tsx
-│   │   ├── AdminLoginPage.tsx
-│   │   ├── AdminDashboard.tsx
-│   │   ├── ServerPage.tsx
-│   │   ├── ProductPage.tsx
-│   │   └── ContactPage.tsx
-│   ├── lib/            # Utilitários
-│   │   └── utils.ts
-│   ├── data/           # Dados estáticos
-│   ├── App.tsx         # Componente principal com rotas
-│   ├── main.tsx        # Ponto de entrada
-│   └── index.css       # Estilos globais
-├── public/             # Arquivos estáticos
-└── package.json
-```
+### Configurações Necessárias:
 
-## 🎯 Rotas Disponíveis
+1. **Framework**: Vite
+2. **Build Command**: `npm run build`
+3. **Output Directory**: `dist`
+4. **Node Version**: 22.x
 
-- `/` - Página inicial
-- `/admin/login` - Login administrativo
-- `/admin` - Dashboard admin
-- `/server/:slug` - Página de servidor específico
-- `/product/:id` - Página de produto
-- `/contact` - Página de contato
+### Passos:
 
-## 🛠️ Como Usar
+1. Conecte seu repositório GitHub à Hostinger
+2. Configure as variáveis acima
+3. Clique em "Deploy"
 
-### Instalação
+## 💻 Desenvolvimento Local
 
 ```bash
-cd seventv-vite
+# Instalar dependências
 npm install
-```
 
-### Desenvolvimento
-
-```bash
+# Rodar em desenvolvimento
 npm run dev
-```
 
-Acesse: `http://localhost:5173`
-
-### Build para Produção
-
-```bash
+# Build para produção
 npm run build
-```
 
-### Preview da Build
-
-```bash
+# Preview da build
 npm run preview
 ```
 
-## 🎨 Diferenças do Next.js
+## 📁 Estrutura
 
-### Roteamento
-- **Next.js**: File-based routing (`app/` directory)
-- **Vite**: React Router DOM (configurado em `App.tsx`)
+```
+src/
+├── components/
+│   ├── ui/          # Componentes base (Button, Card, Spline, Spotlight)
+│   ├── Navbar.tsx
+│   └── SplineDemo.tsx
+├── pages/
+│   ├── HomePage.tsx          # Hero 3D em tela cheia
+│   ├── SplineDemoPage.tsx
+│   ├── AdminDashboard.tsx
+│   ├── AdminLoginPage.tsx
+│   ├── ContactPage.tsx
+│   ├── ProductPage.tsx
+│   └── ServerPage.tsx
+├── lib/
+│   └── utils.ts
+└── App.tsx
+```
 
-### Navegação
-- **Next.js**: `<Link href="/path">`
-- **Vite**: `<Link to="/path">`
+## 🎨 Páginas
 
-### Imagens
-- **Next.js**: `<Image>` component otimizado
-- **Vite**: `<img>` tag padrão (ou use vite-plugin-image-optimizer)
+- `/` - Home com modelo 3D interativo
+- `/demo/spline` - Demonstração completa do Spline
+- `/admin/login` - Login administrativo
+- `/admin` - Dashboard
+- `/contact` - Contato
+- `/server/:slug` - Servidor específico
+- `/product/:id` - Produto específico
 
-### API Routes
-- **Next.js**: `app/api/` directory
-- **Vite**: Precisa de backend separado (Express, Fastify, etc.)
+## 🔧 Tecnologias
 
-### Server Components
-- **Next.js**: Suporta Server Components
-- **Vite**: Apenas Client Components
-
-## 📦 Próximos Passos
-
-1. **Backend**: Configurar servidor Express/Fastify para APIs
-2. **Autenticação**: Implementar sistema de auth completo
-3. **Banco de Dados**: Configurar Prisma com PostgreSQL
-4. **Imagens**: Adicionar imagens do projeto original
-5. **Componentes**: Migrar componentes restantes do Next.js
-
-## 🔧 Configurações
-
-- **Alias**: `@/` aponta para `src/`
-- **TailwindCSS**: Configurado com tema customizado
-- **TypeScript**: Strict mode habilitado
-- **ESLint**: Configurado para React
+- React 19.2.0
+- TypeScript 5.9.3
+- Vite 7.3.0
+- Tailwind CSS 3.3.0
+- React Router DOM
+- Spline (@splinetool/react-spline)
+- Framer Motion
+- Radix UI
+- Lucide React
 
 ## 📝 Notas
 
-Este projeto replica a estrutura do Seven TV original (Next.js) mas usando Vite para melhor performance de desenvolvimento e builds mais rápidos.
+- O modelo 3D está configurado para interação com mouse
+- Build otimizado para produção
+- Lazy loading do Spline para melhor performance
 
-Para funcionalidades que dependem de SSR (Server-Side Rendering), será necessário implementar um backend separado ou considerar usar Vite SSR.
+## 🐛 Troubleshooting
+
+### Build falha com erro TypeScript
+Execute: `npm run build` localmente para verificar erros
+
+### Modelo 3D não carrega
+Verifique se a URL do Spline está acessível
+
+### Erro de CORS
+Certifique-se que a cena Spline está publicada publicamente
+
+## 📄 Licença
+
+Projeto privado - Seven TV © 2025

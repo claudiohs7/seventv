@@ -1,5 +1,5 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&family=Orbitron:wght@400;500;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,44 +7,54 @@
 
 @layer base {
   :root {
-    /* Seven TV Blue Palette based on HSL for Shadcn */
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Tech Blue & Black Theme */
+    --background: 220 100% 3%;
+    /* #000814 - Preto profundo */
+    --foreground: 195 100% 95%;
+    /* #E8F9FF - Branco azulado */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 45% 11%;
+    /* #0D1B2A - Azul muito escuro */
+    --card-foreground: 195 100% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 45% 11%;
+    --popover-foreground: 195 100% 95%;
 
-    --primary: 203 89% 53%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 195 100% 50%;
+    /* #00D9FF - Cyan neon */
+    --primary-foreground: 220 100% 3%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 211 100% 50%;
+    /* #0A84FF - Azul elétrico */
+    --secondary-foreground: 195 100% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 30% 17%;
+    /* #1B263B - Cinza tech */
+    --muted-foreground: 195 50% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 195 100% 50%;
+    /* #00D9FF - Cyan */
+    --accent-foreground: 220 100% 3%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 195 100% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 203 89% 53%;
+    --border: 215 30% 17%;
+    --input: 215 30% 17%;
+    --ring: 195 100% 50%;
 
     --radius: 0.5rem;
 
-    /* Futuristic theme colors */
-    --color-space-dark: #0b0f17;
-    --color-text-primary: #f5f7fb;
-    --color-text-muted: #9aa6c2;
-    --color-accent-orange: #ff6b35;
-    --color-accent-gold: #ffd60a;
-    --color-cyan: #2dd4ff;
+    /* Tech theme colors */
+    --color-space-dark: #000814;
+    --color-deep-blue: #0D1B2A;
+    --color-tech-gray: #1B263B;
+    --color-text-primary: #E8F9FF;
+    --color-text-muted: #7B9CB8;
+    --color-cyan-neon: #00D9FF;
+    --color-blue-electric: #0A84FF;
+    --color-cyan-glow: rgba(0, 217, 255, 0.6);
+    --color-blue-glow: rgba(10, 132, 255, 0.6);
   }
 }
 
@@ -56,13 +66,20 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
-    background: var(--color-space-dark);
+    background: linear-gradient(135deg, #000814 0%, #0D1B2A 50%, #000814 100%);
+    background-attachment: fixed;
     color: var(--color-text-primary);
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Orbitron', 'Poppins', sans-serif;
     font-weight: 700;
+    letter-spacing: 1px;
   }
 }
 
@@ -72,13 +89,27 @@
   }
 
   .glass-panel {
-    @apply bg-card/40 backdrop-blur-md border border-white/10 rounded-xl;
+    @apply bg-card/40 backdrop-blur-md border border-primary/20 rounded-xl;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.1),
+      inset 0 0 20px rgba(0, 217, 255, 0.05);
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #ffd60a 0%, #ff9f1c 50%, #ff6b35 100%);
+    background: linear-gradient(135deg, #00D9FF 0%, #0A84FF 50%, #00D9FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.5));
+  }
+
+  .neon-border {
+    border: 2px solid var(--color-cyan-neon);
+    box-shadow: 0 0 10px var(--color-cyan-glow),
+      inset 0 0 10px rgba(0, 217, 255, 0.1);
+  }
+
+  .tech-glow {
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.3),
+      0 0 60px rgba(10, 132, 255, 0.2);
   }
 }

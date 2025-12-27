@@ -26,14 +26,14 @@ export default function HomePage() {
                         <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text drop-shadow-2xl">
                             SEVEN TV
                         </h1>
-                        <p className="text-xl md:text-2xl text-white mb-12 max-w-3xl mx-auto drop-shadow-lg font-medium">
+                        <p className="text-xl md:text-2xl text-foreground/90 mb-12 max-w-3xl mx-auto drop-shadow-lg font-medium">
                             A melhor experiência em servidores IPTV premium. Qualidade, estabilidade e suporte incomparáveis.
                         </p>
                         <div className="flex gap-4 justify-center flex-wrap">
-                            <a href="#products" className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-bold text-lg hover:bg-primary/90 transition-all hover:scale-105 shadow-2xl pointer-events-auto">
+                            <a href="#products" className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-bold text-lg hover:bg-primary/90 transition-all hover:scale-105 tech-glow pointer-events-auto">
                                 Ver Servidores
                             </a>
-                            <a href="#contact" className="px-8 py-4 border-2 border-white bg-white/10 backdrop-blur-sm text-white rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all shadow-2xl pointer-events-auto">
+                            <a href="#contact" className="px-8 py-4 border-2 border-primary bg-primary/10 backdrop-blur-sm text-primary rounded-lg font-bold text-lg hover:bg-primary hover:text-primary-foreground transition-all neon-border pointer-events-auto">
                                 Fale Conosco
                             </a>
                         </div>
